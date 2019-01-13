@@ -1,0 +1,26 @@
+from machine import ADC,Pin
+import time
+
+adc0=ADC(Pin(36))
+adc1=ADC(Pin(39))
+adc2=ADC(Pin(34))
+adc3=ADC(Pin(35))
+while True:
+
+print("adc0=",adc0.read())    #Read ADC value  time.sleep(1)
+
+  print("adc1=",adc1.read())
+
+  time.sleep(1) 
+
+ print("adc2=",adc2.read())  
+
+	time.sleep(1)
+
+  print("adc3=",adc3.read())
+
+  time.sleep(1)  
+
+print("adc4=",adc3.read())  
+
+time.sleep(1)
