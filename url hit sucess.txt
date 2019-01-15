@@ -1,0 +1,5 @@
+print('hai')
+import urequests
+response = urequests.get('http://smartkonnect.in/indauto/process.php?authKey=1&sensorId=2&sensorData=12&sequenceNum=34')
+print(type(response))
+print(r.status_code)
