@@ -1,0 +1,25 @@
+#include <Wire.h>
+#include <Adafruit_ADS1015.h>
+ 
+Adafruit_ADS1115 adc(0x48);
+
+void setup(void) 
+{
+  
+  Serial.begin(115200); 
+  adc.begin();
+}
+
+void loop(void) 
+{
+  float Voltage = 0.0;
+  int16_t adc0;  
+  adc0 = adc.readADC_SingleEnded(0);
+  Voltage = (adc0 * 0.1875)/1000;  
+  
+  Serial.print("AN0: "); 
+  Serial.print(adc0);
+  Serial.print("\tVolts: ");
+  Serial.println(Voltage,2);   
+  delay(1000);
+}
